@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Bangers, Permanent_Marker, Nunito } from 'next/font/google'
 import './globals.css'
 import { CartProvider } from '@/context/CartContext'
@@ -43,6 +44,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Navbar />
           {children}
         </CartProvider>
+        <Script
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="69ca85f22dff72509de852ea"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   )
